@@ -15,5 +15,7 @@ RUN sed -i 's/^.*ulimit.*$//' /etc/init.d/astaire
 RUN sed -i 's/^.*ptrace_scope.*$//' /etc/init.d/rogers
 RUN sed -i 's/^.*ulimit.*$//' /etc/init.d/rogers
 
+RUN sed -i 's#mv /tmp/hosts\.\$\$#cat /tmp/hosts.$$ > #' /usr/share/clearwater/infrastructure/scripts/*host*
+
 
 EXPOSE 11311
