@@ -11,5 +11,6 @@ COPY rogers.supervisord.conf /etc/supervisor/conf.d/rogers.conf
 COPY clearwater-group.supervisord.conf /etc/supervisor/conf.d/clearwater-group.conf
 
 RUN sed -i 's/^.*ptrace_scope.*$//' /etc/init.d/astaire
+RUN sed -i 's/^.*ulimit.*$//' /etc/init.d/astaire
 
 EXPOSE 11311
